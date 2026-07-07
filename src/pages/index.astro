@@ -1,4 +1,61 @@
 ---
+import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-return Astro.redirect(`${base}/experiment/`);
 ---
+
+<Layout
+  title="CAL-Pathfinder"
+  description="CAL-Pathfinder searches for ultralight dark matter — axions and axion-like particles — using quantum-limited electromagnetic receivers at UC Berkeley."
+>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">UC Berkeley</span>
+      <h1>CAL-Pathfinder</h1>
+      <p class="desc">
+        Searching for ultralight dark matter and high-frequency gravitational waves using
+        quantum-limited lumped-element electromagnetic receivers.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+        <a href={`${base}/research/`} class="btn btn-primary">Our Research</a>
+        <a href={`${base}/join/`} class="btn btn-secondary">Join the Group</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+
+        <div class="card">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Dark Matter Search</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);margin-bottom:1rem;">
+            We target the sub-&mu;eV axion mass window using a solenoidal LC resonator
+            and SQUID readout at 20 mK.
+          </p>
+          <a href={`${base}/research/dark-matter/`} style="font-size:0.875rem;color:var(--blue);font-weight:500;">Learn more &rarr;</a>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Gravitational Waves</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);margin-bottom:1rem;">
+            The same electromagnetic pickup can search for high-frequency gravitational waves
+            via the inverse Gertsenshtein effect.
+          </p>
+          <a href={`${base}/research/gravitational-waves/`} style="font-size:0.875rem;color:var(--blue);font-weight:500;">Learn more &rarr;</a>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">The Experiment</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);margin-bottom:1rem;">
+            CAL-Pathfinder develops and characterizes the coaxial pickup and resonator
+            technology for next-generation DMRadio searches.
+          </p>
+          <a href={`${base}/research/experiment/`} style="font-size:0.875rem;color:var(--blue);font-weight:500;">Learn more &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

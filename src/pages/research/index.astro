@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Research"
+  description="Research topics pursued by the CAL-Pathfinder collaboration: dark matter, gravitational waves, and the experiment."
+>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">CAL-Pathfinder</span>
+      <h1>Research</h1>
+      <p class="desc">
+        Our program spans dark matter searches, high-frequency gravitational wave detection,
+        and the development of quantum-limited lumped-element instrumentation.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+
+        <a href={`${base}/research/dark-matter/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Dark Matter &amp; Axions</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            The evidence for dark matter, the axion as a motivated candidate, and the
+            detection principle underlying DMRadio.
+          </p>
+        </a>
+
+        <a href={`${base}/research/gravitational-waves/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Gravitational Waves</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            High-frequency gravitational wave detection via the inverse Gertsenshtein effect
+            using the CAL electromagnetic pickup.
+          </p>
+        </a>
+
+        <a href={`${base}/research/experiment/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">The Experiment</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            How CAL-Pathfinder works: solenoidal LC resonator, SQUID amplifiers,
+            and cryogenic readout.
+          </p>
+        </a>
+
+        <a href={`${base}/research/publications/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Publications</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            Papers, theses, and presentations from the CAL DMRadio collaboration.
+          </p>
+        </a>
+
+        <a href={`${base}/research/talks/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Talks &amp; Calendar</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            Upcoming seminars, conference talks, and collaboration workshops.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

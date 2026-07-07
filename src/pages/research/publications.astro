@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import pubs from '../content/publications/publications.json';
+import Layout from '../../layouts/Layout.astro';
+import pubs from '../../content/publications/publications.json';
 
 const papers   = pubs.filter(p => p.type === 'paper' || p.type === 'preprint');
 const theses   = pubs.filter(p => p.type === 'thesis');
@@ -158,7 +158,6 @@ const slides   = pubs.filter(p => p.type === 'slides');
       if (match) total++;
     });
 
-    // Hide section headers if all entries in that section are hidden
     ['papers', 'theses', 'slides'].forEach(id => {
       const section = document.getElementById(`section-${id}`);
       const list    = document.getElementById(`${id}-list`);
