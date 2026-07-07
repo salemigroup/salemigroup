@@ -1,6 +1,6 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import pubs from '../../content/publications/publications.json';
+import Layout from '../../../layouts/Layout.astro';
+import pubs from '../../../content/publications/publications.json';
 
 const papers   = pubs.filter(p => p.type === 'paper' || p.type === 'preprint');
 const theses   = pubs.filter(p => p.type === 'thesis');
