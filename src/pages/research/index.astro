@@ -10,7 +10,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="page-header">
     <div class="container">
-      <span class="eyebrow">CAL-Pathfinder</span>
+      <span class="eyebrow">Salemi Group</span>
       <h1>Research</h1>
       <p class="desc">
         Our program spans dark matter searches, high-frequency gravitational wave detection,
@@ -21,55 +21,92 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="section">
     <div class="container">
-      <div class="grid-3">
 
-        <a href={`${base}/research/dark-matter/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Dark Matter &amp; Axions</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            The evidence for dark matter, the axion as a motivated candidate, and the
-            detection principle underlying DMRadio.
-          </p>
+      <h2 style="margin-bottom:1.5rem;color:var(--blue);">Detector Technologies</h2>
+      <div class="grid-3" style="margin-bottom:4rem;">
+        <a href={`${base}/research/lumped-element-detectors/`} class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/lumped_element.jpeg');`}>
+          <h3 class="card-title">Lumped-Element Detectors</h3>
         </a>
-
-        <a href={`${base}/research/gravitational-waves/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Gravitational Waves</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            High-frequency gravitational wave detection via the inverse Gertsenshtein effect
-            using the CAL electromagnetic pickup.
-          </p>
+        <a href={`${base}/research/quantum-sensing/`} class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/quantum_sense.jpeg');`}>
+          <h3 class="card-title">Quantum Sensing</h3>
         </a>
-
-        <a href={`${base}/research/non-proliferation/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Non-Proliferation</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            Coming soon.
-          </p>
+        <a href={`${base}/research/bread/`} class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/bread_logo.png');`}>
+          <h3 class="card-title">BREAD</h3>
         </a>
-
-        <a href={`${base}/research/lumped-element-detectors/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Lumped-Element Detectors</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            How CAL-Pathfinder works: solenoidal LC resonator, SQUID amplifiers,
-            and cryogenic readout. Includes experiment details, publications, and talks.
-          </p>
-        </a>
-
-        <a href={`${base}/research/quantum-sensing/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Quantum Sensing</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            Coming soon.
-          </p>
-        </a>
-
-        <a href={`${base}/research/bread/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Bread</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            Coming soon.
-          </p>
-        </a>
-
       </div>
+
+      <hr class="divider" style="margin-bottom:3rem;" />
+
+      <h2 style="margin-bottom:2rem;color:var(--blue);">Science</h2>
+
+      <div class="research-topic research-topic-img">
+        <div class="research-topic-text">
+          <h3>Dark Matter &amp; Axions</h3>
+          <p>There is lots of evidence that the visible matter around us is only a small fraction of the matter in the universe. For example, we can observe the motion of galaxies inside galaxy clusters, and we can see that there has to be extra mass that is causing them to move differently than we would otherwise expect. So far, there have been no confirmed reports of the detection of a particle that could be this 'dark' matter. There are many theories as to what dark matter could be, and one of the most well-motivated ones is the axion</p>
+          <p>The axion was proposed as part of the solution to another longstanding problem in physics, the strong CP problem. In its essence, this is the problem that two unrelated parts of physics cancel each other out to one part in 1010, which we call a fine-tuning problem. The existence of axions would solve this, and as a bonus they do a great job of explaining the many anomalies that point to dark matter. Axions are hard to detect because they interact extremely feebly with the visible matter that makes up our detectors</p>
+          <a href={`${base}/research/dark-matter/`} class="read-more">Read more →</a>
+        </div>
+        <img src={`${base}/images/dark_matter.png`} alt="Dark matter illustration" class="research-topic-photo" />
+      </div>
+
+      <hr class="divider" style="margin: 2rem 0;" />
+
+      <div class="research-topic">
+        <h3>Gravitational Waves</h3>
+        <p>Coming soon.</p>
+        <a href={`${base}/research/gravitational-waves/`} class="read-more">Read more →</a>
+      </div>
+
+      <hr class="divider" style="margin: 2rem 0;" />
+
+      <div class="research-topic">
+        <h3>Non-Proliferation</h3>
+        <p>Coming soon.</p>
+        <a href={`${base}/research/non-proliferation/`} class="read-more">Read more →</a>
+      </div>
+
     </div>
   </section>
 
 </Layout>
+
+<style>
+  .card-grow {
+    min-height: 160px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    transition: box-shadow 0.2s, min-height 0.3s, transform 0.2s;
+  }
+  .card-grow:hover {
+    min-height: 240px;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+    transform: none;
+  }
+  .card-title {
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    margin: 0;
+  }
+  .research-topic-img {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .research-topic-text {
+    flex: 1;
+  }
+  .research-topic-photo {
+    width: 300px;
+    height: auto;
+    border-radius: var(--radius);
+    flex-shrink: 0;
+  }
+  @media (max-width: 640px) {
+    .research-topic-img { flex-direction: column; }
+    .research-topic-photo { width: 100%; }
+  }
+</style>
