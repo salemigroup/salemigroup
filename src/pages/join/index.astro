@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Join the Group"
+  description="Join the Group."
+>
+
+  <section class="page-header">
+    <div class="container">
+      <!--<span class="eyebrow"></span>-->
+      <h1>Join the Group</h1>
+      <p class="desc">
+        We are always looking for motivated researchers at all levels! See below for information on how to join.
+      </p>
+    </div>
+  </section>
+
+
+
+  <hr class="divider">
+
+  <!-- Open roles -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label"></span>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+         <!-- Postdoc -->
+        <div class="card" style="border-left:4px solid var(--blue);">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <h3 style="margin-bottom:0.25rem;">Postdoctoral Researcher</h3>
+            </div>
+          </div>
+          <p style="margin-bottom:1rem;">
+            We currently do not have any postdoc openings. For the most up to date information, please check 
+            <a href="https://academicjobsonline.org" style="color: #FDB515"> AJO</a> and
+            <a href="https://inspirehep.net/jobs" style="color: #FDB515"> Inspire HEP</a>.
+          </p>
+          
+          </p>
+        </div>
+      
+
+        <!-- Graduate students -->
+        <div class="card" style="border-left:4px solid var(--blue);">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <h3 style="margin-bottom:0.25rem;">Graduate Students</h3>
+              <!-- <span class="tag tag-blue">Open</span>
+              <span class="tag" style="margin-left:0.25rem;">PhD Program</span> -->
+            </div>
+            <a href="https://physics.berkeley.edu/academic/graduate-degree/graduate-admissions" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.875rem;">Apply to Berkeley Physics</a>
+          </div>
+          <p style="margin-bottom:1rem;">
+            Information on the Berkeley Physics PhD program may be found <a href="https://physics.berkeley.edu/academic/graduate-degree/graduate-admissions" style="color: #FDB515 ">here</a>. Prospective and admitted PhD students are encourged to contact Professor Salemi on group openings.
+          </p>
+          <p>
+            Current Berkeley PhD students may contact Professor Salemi for information on research rotations.
+          </p>
+        </div>
+
+        <!-- Undergrad -->
+        <div class="card" style="border-left:4px solid var(--blue);">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <h3 style="margin-bottom:0.25rem;">Undergraduate Students</h3>
+              <!--<span class="tag tag-gold">Open (semester basis)</span>
+            </div>
+             <a href="mailto:pi@berkeley.edu" class="btn btn-secondary" style="font-size:0.875rem;">Send an email</a> -->
+          </div>
+          <p style="margin-bottom:1rem;">
+            Undergrads can work in the group for credit or pay.
+            There are multiple paid research oppurtunities that are listed below. 
+            Contact Professor Salemi to coordinate submitting a proposal. 
+            Berkeley physics has a nice list of opportunities locally and at other institutions, found  
+            <a href="https://physics.berkeley.edu/academics/undergraduate-research/research-opportunities-board" style="color: #FDB515 ">here</a>.
+
+          </p>
+          <p>  
+          Opportunities for Berkeley Students:<br>
+          • <a href="https://physics.berkeley.edu/academics/research-opportunities-board/physics-innovators-initiative-pi2-scholars-program" style="color: #FDB515 ">Pi2</a>: Physics Innovators Initiative Summer Scholars Program.<br>
+          • <a href="https://physics.berkeley.edu/academics/research-opportunities-board/bpurs" style="color: #FDB515 ">BPURS</a>: Berkeley Physics Undergraduate Research Scholars Program.<br>
+          • <a href="https://research.berkeley.edu/surf/" style="color: #FDB515">SURF</a>: Summer Undergraduate Research Fellowships.<br>
+          • URAP: Undergraduate Research Apprentice Program.<br>
+          </p>
+          <p>  
+          Opportunities for Non-Berkeley Students:<br>
+          • <a href="https://science.osti.gov/wdts/suli"style="color: #FDB515 ">SULI</a>: Science Undergraduate Laboratory Internships at LBL.<br>
+          • <a href="https://education.lbl.gov/internships/blur-2/" style="color: #FDB515 ">BLUR</a>: Berkeley Lab Undergraduate Research Program at LBL.<br>
+          • <a href="https://education.lbl.gov/internships/cci/" style="color: #FDB515 ">CCI</a>: Community College Initiative at LBL.<br>
+          </p>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

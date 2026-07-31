@@ -17,15 +17,18 @@ const pathname = Astro.url.pathname;
 
 function isActive(path: string) {
   if (path === '/') return pathname === base + '/' || pathname === base;
-  return pathname.startsWith(base + path);
+  return pathname.startsWith(base + path) && path !== '/';
 }
 
 const nav = [
-  { label: 'Dark Matter',        href: '/dark-matter/' },
-  { label: 'Gravitational Waves', href: '/gravitational-waves/' },
-  { label: 'Experiment',         href: '/experiment/' },
-  { label: 'Talks',              href: '/talks/' },
-  { label: 'Publications',       href: '/publications/' },
+  { label: 'Home',           href: '/' },
+  { label: 'Research',       href: '/research/' },
+  { label: 'People',         href: '/people/' },
+  { label: 'Publications',   href: '/publications/' },
+  { label: 'Facilities',     href: '/facilities/' },
+  { label: 'News',           href: '/news/' },
+  { label: 'Join the Group', href: '/join/' },
+  { label: 'Contact',        href: '/contact/' },
 ];
 ---
 
@@ -49,7 +52,7 @@ const nav = [
     <!-- ── Header ── -->
     <header class="site-header">
       <nav class="nav-inner">
-        <a href={`${base}/experiment/`} class="nav-logo">CAL-<span>Pathfinder</span></a>
+        <a href={`${base}/`} class="nav-logo">Salemi <span>Group</span></a>
 
         <ul class="nav-links">
           {nav.map(({ label, href, cta }) => (
@@ -88,29 +91,35 @@ const nav = [
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand">CAL-Pathfinder</div>
+            <div class="footer-brand">Salemi Group</div>
             <p class="footer-desc">
               A UC Berkeley experiment searching for ultralight dark matter using
               quantum-limited electromagnetic receivers.
             </p>
           </div>
           <div>
-            <div class="footer-heading">Experiment</div>
+            <div class="footer-heading">Research</div>
             <ul class="footer-links">
-              <li><a href={`${base}/experiment/`}>How It Works</a></li>
-              <li><a href={`${base}/dark-matter/`}>Dark Matter Context</a></li>
-              <li><a href={`${base}/publications/`}>Publications</a></li>
+              <li><a href={`${base}/research/dark-matter/`}>Dark Matter &amp; Axions</a></li>
+              <li><a href={`${base}/research/gravitational-waves/`}>Gravitational Waves</a></li>
+              <li><a href={`${base}/research/lumped-element-detectors/`}>Lumped-Element Detectors</a></li>
+              <li><a href={`${base}/research/lumped-element-detectors/publications/`}>Publications</a></li>
+              <li><a href={`${base}/research/lumped-element-detectors/talks/`}>Talks</a></li>
             </ul>
           </div>
           <div>
             <div class="footer-heading">More</div>
             <ul class="footer-links">
-              <li><a href={`${base}/talks/`}>Talks</a></li>
+              <li><a href={`${base}/people/`}>People</a></li>
+              <li><a href={`${base}/facilities/`}>Facilities</a></li>
+              <li><a href={`${base}/news/`}>News</a></li>
+              <li><a href={`${base}/join/`}>Join the Group</a></li>
+              <li><a href={`${base}/contact/`}>Contact</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <span class="footer-copy">&copy; {new Date().getFullYear()} CAL-Pathfinder Collaboration · UC Berkeley</span>
+          <span class="footer-copy">&copy; {new Date().getFullYear()} Salemi Group · UC Berkeley</span>
           <span class="footer-copy">Department of Physics</span>
         </div>
       </div>

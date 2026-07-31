@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Quantum Sensing"
+  description="Quantum sensing research at CAL-Pathfinder."
+>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Research</span>
+      <h1>Quantum Sensing</h1>
+      <p class="desc">
+        Content coming soon.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p style="color:var(--gray-400);">This page is under construction. Check back soon.</p>
+      <div style="margin-top:2rem;">
+        <a href={`${base}/research/`} class="btn btn-secondary">&larr; Back to Research</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

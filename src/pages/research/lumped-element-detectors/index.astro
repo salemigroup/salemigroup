@@ -1,0 +1,60 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Lumped-Element Detectors"
+  description="Lumped-element detector technology for axion dark matter searches: the coaxial resonator, SQUID readout, and the CAL-Pathfinder experiment."
+>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Research</span>
+      <h1>Lumped-Element Detectors</h1>
+      <p class="desc">
+        Lumped-element detectors extend axion searches to sub-&mu;eV masses by treating the
+        experiment as a tunable LC circuit rather than a wavelength-sized cavity.
+        The DMRadio collaboration develops and characterizes this technology for next-generation experiments.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-4">
+
+        <a href={`${base}/research/lumped-element-detectors/dmradio-50l/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">DMRadio-50L</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            The DMRadio-50L experiment: design, construction, and science reach.
+          </p>
+        </a>
+
+        <a href={`${base}/research/lumped-element-detectors/experiment/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">CAL-Pathfinder</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            How CAL-Pathfinder works: solenoidal LC resonator, SQUID amplifiers,
+            and cryogenic readout.
+          </p>
+        </a>
+
+        <a href={`${base}/research/lumped-element-detectors/publications/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Publications</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            Papers, theses, and presentations from the DMRadio collaboration.
+          </p>
+        </a>
+
+        <a href={`${base}/research/lumped-element-detectors/talks/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Talks &amp; Calendar</h3>
+          <p style="font-size:0.9rem;color:var(--gray-600);">
+            Upcoming seminars, conference talks, and collaboration workshops.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
