@@ -1,5 +1,7 @@
 ---
+import { experimental_AstroContainer } from 'astro/container';
 import Layout from '../../layouts/Layout.astro';
+import { propsToFilename } from 'astro/assets/utils';
 ---
 
 <Layout
@@ -12,8 +14,6 @@ import Layout from '../../layouts/Layout.astro';
       <!--<span class="eyebrow">Infrastructure</span>-->
       <h1>Facilities</h1>
       <p class="desc">
-        We operate three cryogenic systems in our lab spaces in Birge Hall and in a shared space in Etcheverry Hall.<br><br>
-        We also work at LBNL facilities including the Molecular Foundry and within the Superconducting Magnet Program.
       </p>
     </div>
   </section>
@@ -29,6 +29,7 @@ import Layout from '../../layouts/Layout.astro';
       <span class="section-label"></span>
       <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
+        <h2>Group facilities</h2>
 
 
 
@@ -120,6 +121,111 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+
+
+<!-- <hr class="divider"> -->
+
+  <section class="section">
+    <div class="container">
+      <span class="section-label"></span>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+        <h2>Facilities we collaborate in</h2>
+
+
+
+
+        <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
+          <!-- Two-column container -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            
+            <!-- Left Column: Image -->
+            <div style="flex-shrink: 0; width: 300px;">
+              <img src="../public/images/foundry.jpg" alt="Molecular Foundry work" style="width: 100%; height: auto; display: block;">
+            </div>
+            
+            <!-- Right Column: Text Content -->
+            <div style="flex-grow: 1;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem;">
+                <div>
+                  <h3 style="margin-bottom:0.25rem;font-size:18px">LBNL Molecular Foundry</h3>
+                </div>
+              </div>
+              <p style="margin-bottom: 0;font-size:18px"">
+                The Molecular Foundry is where we create quantum devices! 
+                The foundry's <a style="color: #FDB515", href="https://foundry.lbl.gov/about/facilities/nanofabrication/">nanofabrication facility</a> has a wide suite of superconducting fabrication capabilities, <>spearheaded by an <a style="color: #FDB515", href="https://foundry.lbl.gov/instrumentation/quantum-cluster-deposition-tool/">Angstrom Cluster Deposition tool</a>.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
+          <!-- Two-column container -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            
+            <!-- Left Column: Image -->
+            <div style="flex-shrink: 0; width: 300px;">
+              <img src="../public/images/magnet" alt="Superconducting Magnet Program" style="width: 100%; height: auto; display: block;">
+            </div>
+            
+            <!-- Right Column: Text Content -->
+            <div style="flex-grow: 1;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem;">
+                <div>
+                  <h3 style="margin-bottom:0.25rem;font-size:18px">LBNL Superconducting Magnet Program</h3>
+                </div>
+              </div>
+              <p style="margin-bottom: 0;font-size:18px"">
+                <!--We design and make magnets for next-generation axion dark matter experiments. -->
+                A strong magnet requires sacrifice, the kind only hard drives and laptops can fulfill.
+                Students are given a choice: provide for the supercurrent, or face the wrath of BCS.
+                15 T has been achieved, with plans for 20 T in the works. 
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
+          <!-- Two-column container -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            
+            <!-- Left Column: Image -->
+            <div style="flex-shrink: 0; width: 300px;">
+              <img src="../public/images/physics" alt="physics" style="width: 100%; height: auto; display: block;">
+            </div>
+            
+            <!-- Right Column: Text Content -->
+            <div style="flex-grow: 1;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem;">
+                <div>
+                  <h3 style="margin-bottom:0.25rem;font-size:18px">LBNL Physics Cold Corridor</h3>
+                </div>
+              </div>
+              <p style="margin-bottom: 0;font-size:18px"">
+                As Prof. Salemi's role as LBNL Faculty Scientist, the group regularly collarborates with the cryogenic groups in the LBNL Physics Division.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
 
 
 </Layout>
