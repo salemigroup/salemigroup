@@ -20,9 +20,18 @@ function isActive(path: string) {
   return pathname.startsWith(base + path) && path !== '/';
 }
 
+const researchDropdown = [
+  { label: 'Overview',                   href: '/research/' },
+  { label: 'Dark Matter & Axions',       href: '/research/dark-matter/' },
+  { label: 'Gravitational Waves',        href: '/research/gravitational-waves/' },
+  { label: 'Lumped-Element Detectors',   href: '/research/lumped-element-detectors/' },
+  { label: 'Quantum Sensing',            href: '/research/quantum-sensing/' },
+  { label: 'Non-Proliferation',          href: '/research/non-proliferation/' },
+];
+
 const nav = [
   { label: 'Home',           href: '/' },
-  { label: 'Research',       href: '/research/' },
+  { label: 'Research',       href: '/research/', dropdown: researchDropdown },
   { label: 'People',         href: '/people/' },
   { label: 'Publications',   href: '/publications/' },
   { label: 'Facilities',     href: '/facilities/' },
@@ -55,14 +64,25 @@ const nav = [
         <a href={`${base}/`} class="nav-logo">Salemi <span>Group</span></a>
 
         <ul class="nav-links">
-          {nav.map(({ label, href, cta }) => (
-            <li>
+          {nav.map(({ label, href, cta, dropdown }) => (
+            <li class:list={[{ 'has-dropdown': dropdown }]}>
               <a
                 href={`${base}${href}`}
                 class:list={[{ active: isActive(href), 'nav-cta': cta }]}
               >
-                {label}
+                {label}{dropdown && <span class="dropdown-arrow" aria-hidden="true">▾</span>}
               </a>
+              {dropdown && (
+                <ul class="dropdown-menu">
+                  {dropdown.map((item) => (
+                    <li>
+                      <a href={`${base}${item.href}`} class:list={[{ active: isActive(item.href) }]}>
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -75,8 +95,13 @@ const nav = [
       <!-- Mobile menu -->
       <nav class="nav-mobile" id="nav-mobile">
         <a href={`${base}/`}>Home</a>
-        {nav.map(({ label, href, cta }) => (
-          <a href={`${base}${href}`} class:list={[{ cta }]}>{label}</a>
+        {nav.filter(({ href }) => href !== '/').map(({ label, href, cta, dropdown }) => (
+          <>
+            <a href={`${base}${href}`} class:list={[{ cta }]}>{label}</a>
+            {dropdown && dropdown.filter((item) => item.href !== href).map((item) => (
+              <a href={`${base}${item.href}`} class="mobile-sub">{item.label}</a>
+            ))}
+          </>
         ))}
       </nav>
     </header>
