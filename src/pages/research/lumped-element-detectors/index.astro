@@ -10,28 +10,52 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="page-header">
     <div class="container">
-      <span class="eyebrow">Research</span>
       <h1>Lumped-Element Detectors</h1>
-      <p class="desc">
-        Lumped-element detectors extend axion searches to sub-&mu;eV masses by treating the
-        experiment as a tunable LC circuit rather than a wavelength-sized cavity.
-        The DMRadio collaboration develops and characterizes this technology for next-generation experiments.
-      </p>
+    </div>
+  </section>
+
+  <!-- How Lumped-Element Works -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col-60">
+        <div>
+          <h2 style="margin-bottom:1.25rem;">How Lumped-Element Detection Works</h2>
+          <p style="margin-bottom:1.25rem;">
+            In a conventional microwave cavity haloscope, the detector volume must be comparable to
+            the photon wavelength at the target axion frequency, which confines cavity-based searches
+            to axion masses above roughly 1&nbsp;&mu;eV. In the <em>lumped-element regime </em>&mdash;
+            applicable when the target wavelength far exceeds the detector size &mdash; the axion-induced
+            electromagnetic signal can instead be treated as a spatially uniform effective current
+            driving a simple LC circuit. The detector is characterized by its inductance and capacitance
+            rather than by cavity mode structure, so pickup volume and magnet volume can be scaled
+            independently of the target frequency. This opens the sub-&mu;eV mass window that cavity
+            haloscopes cannot reach.
+          </p>
+          <p style="margin-bottom:1.25rem;">
+            An axion traversing a strong static magnetic field acquires an effective coupling to the
+            electromagnetic field, producing a faint oscillating magnetic flux in a nearby inductive
+            pickup coil. When the LC resonator is tuned so that its resonant frequency matches the
+            axion oscillation frequency (&omega;<sub>a</sub>&nbsp;=&nbsp;m<sub>a</sub>c<sup>2</sup>/&hbar;),
+            the quality factor Q enhances the axion-induced signal power relative to the thermal noise
+            floor. Scanning the resonance over time&mdash;via variable capacitors or switched
+            elements&mdash;allows the experiment to cover a continuous range of axion masses.
+          </p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div class="diagram-placeholder">
+            <p><strong>Detector schematic</strong></p>
+            <p>Coaxial pickup coil + SQUID chain</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid-4">
+      <div class="grid-2">
 
-        <a href={`${base}/research/lumped-element-detectors/dmradio-50l/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">DMRadio-50L</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            The DMRadio-50L experiment: design, construction, and science reach.
-          </p>
-        </a>
-
-        <a href={`${base}/research/lumped-element-detectors/experiment/`} class="card" style="text-decoration:none;color:inherit;display:block;">
+        <a href={`${base}/research/lumped-element-detectors/cal-pathfinder/`} class="card" style="text-decoration:none;color:inherit;display:block;">
           <h3 style="margin-bottom:0.5rem;color:var(--blue);">CAL-Pathfinder</h3>
           <p style="font-size:0.9rem;color:var(--gray-600);">
             How CAL-Pathfinder works: solenoidal LC resonator, SQUID amplifiers,
@@ -39,19 +63,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           </p>
         </a>
 
-        <a href={`${base}/research/lumped-element-detectors/publications/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Publications</h3>
+        <div class="card" style="color:inherit;display:block;">
+          <h3 style="margin-bottom:0.5rem;color:var(--blue);">DMRadio-50L</h3>
           <p style="font-size:0.9rem;color:var(--gray-600);">
-            Papers, theses, and presentations from the DMRadio collaboration.
+            The DMRadio-50L experiment: design, construction, and science reach.
           </p>
-        </a>
-
-        <a href={`${base}/research/lumped-element-detectors/talks/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">Talks &amp; Calendar</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            Upcoming seminars, conference talks, and collaboration workshops.
-          </p>
-        </a>
+        </div>
 
       </div>
     </div>

@@ -8,20 +8,129 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   description="Publications from the CAL-Pathfinder collaboration."
 >
 
+
+
+
   <section class="page-header">
     <div class="container">
       <!--<span class="eyebrow">Research Output</span>-->
       <h1>Publications</h1>
       <p class="desc">
-        Papers, theses, and presentations from the Salemi Group.
       </p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <p style="color:var(--gray-400);">Content coming soon.</p>
+  <div class="container">
+    <h3 style="margin-bottom:2.5rem;magin-top: -10px"><a style="color: #FDB515", href="https://inspirehep.net/authors/1906552">Prof. Salemi's Inspire HEP</a></h3>
+    <!-- JavaScript populates this container -->
+    <div id="publications-list" style="display:flex;flex-direction:column;gap:1.5rem;">
+      <p style="font-size:18px;">Loading publications <span id="spinner" style="font-family: monospace;">|</span></p>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  // Hardcode your INSPIRE Author ID number (or BAI) here
+  const AUTHOR_ID = '1906552'; 
+
+async function loadInspirePapers() {
+    const container = document.getElementById('publications-list');
+
+
+    // 1. Terminal Spinner Setup
+    const spinnerFrames = ['|', '/', '-', '\\'];
+    let frameIndex = 0;
+    const spinnerInterval = setInterval(() => {
+      const spinnerEl = document.getElementById('spinner');
+      if (spinnerEl) {
+        frameIndex = (frameIndex + 1) % spinnerFrames.length;
+        spinnerEl.textContent = spinnerFrames[frameIndex];
+      }
+    }, 100); // Rotates every 100ms
+
+    const isNumericId = /^\d+$/.test(AUTHOR_ID.trim());
+    const query = isNumericId ? `authors.recid:${AUTHOR_ID.trim()}` : `a:${AUTHOR_ID.trim()}`;
+    const endpoint = `https://inspirehep.net/api/literature?q=${encodeURIComponent(query)}&sort=mostrecent&size=100`;
+
+    try {
+      const response = await fetch(endpoint);
+      if (!response.ok) throw new Error(`HTTP Error ${response.status}`);
+      
+      const data = await response.json();
+      const hits = data.hits?.hits || [];
+
+      if (hits.length === 0) {
+        container.innerHTML = `<p>No publications found for author ID: <code>${AUTHOR_ID}</code></p>`;
+        return;
+      }
+
+      container.innerHTML = '';
+
+      hits.forEach(hit => {
+        const meta = hit.metadata || {};
+        
+        const title = meta.titles?.[0]?.title || 'Untitled Publication';
+        const paperUrl = `https://inspirehep.net/literature/${hit.id}`;
+        
+        // 1. Build Journal Information Text
+        const pubInfo = meta.publication_info?.[0];
+        let journalText = '';
+
+        if (pubInfo?.journal_title) {
+          journalText = pubInfo.journal_title;
+          if (pubInfo.journal_volume) journalText += ` ${pubInfo.journal_volume}`;
+          if (pubInfo.journal_issue) journalText += ` (${pubInfo.journal_issue})`;
+          if (pubInfo.year) journalText += ` (${pubInfo.year})`;
+          
+          const pageOrArt = pubInfo.page_start || pubInfo.artid;
+          if (pageOrArt) journalText += ` ${pageOrArt}`;
+        } else {
+          const fallbackYear = meta.earliest_date?.slice(0, 4) || pubInfo?.year || 'N/A';
+          journalText = `(${fallbackYear})`;
+        }
+
+        // 2. Wrap Journal Text with DOI Link (if available)
+        let journalHtml = journalText;
+        if (meta.dois?.[0]?.value) {
+          const doi = meta.dois[0].value;
+          journalHtml = `<a href="https://doi.org/${doi}" target="_blank" rel="noopener" style="color:var(--blue, #0056b3);">${journalText}</a>`;
+        }
+
+        // 3. Build arXiv Link (if available)
+        const detailsParts = [journalHtml];
+        if (meta.arxiv_eprints?.[0]?.value) {
+          const arxivId = meta.arxiv_eprints[0].value;
+          detailsParts.push(`<a href="https://arxiv.org/abs/${arxivId}" target="_blank" rel="noopener" style="color:var(--blue, #0056b3);">arXiv:${arxivId}</a>`);
+        }
+
+        const paperDetails = detailsParts.join(' | ');
+
+        const cardHTML = `
+          <div class="card" style="border-left:4px solid var(--blue);">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+              <div>
+                <h3 style="margin-bottom:0.25rem;">
+                  <a href="${paperUrl}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">${title}</a>
+                </h3>
+              </div>
+            </div>
+            <p>${paperDetails}</p>
+          </div>
+        `;
+
+        container.insertAdjacentHTML('beforeend', cardHTML);
+      });
+    } catch (error) {
+      console.error('INSPIRE API Error:', error);
+      container.innerHTML = '<p>Unable to retrieve publications at this time.</p>';
+    }
+  }
+
+  loadInspirePapers();
+</script>
+
+
 
 </Layout>
+

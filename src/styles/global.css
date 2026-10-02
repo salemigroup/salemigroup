@@ -101,6 +101,30 @@ main         { flex: 1; }
 .nav-mobile.open a:hover { background: var(--gray-50); }
 .nav-mobile.open a.cta { background: var(--blue); color: var(--white); margin-top: 0.5rem; }
 
+/* ── Nav dropdown ────────────────────────────────────────────────── */
+.nav-links li.has-dropdown { position: relative; }
+.dropdown-arrow { font-size: 0.6rem; margin-left: 0.25rem; vertical-align: middle; }
+.dropdown-menu {
+  display: none; position: absolute; top: calc(100% + 6px); left: 50%;
+  transform: translateX(-50%); background: var(--white);
+  border: 1px solid var(--gray-200); border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.09); padding: 0.4rem;
+  list-style: none; min-width: 210px; z-index: 200; white-space: nowrap;
+}
+.nav-links li.has-dropdown:hover .dropdown-menu,
+.nav-links li.has-dropdown:focus-within .dropdown-menu { display: block; }
+.dropdown-menu a {
+  display: block; padding: 0.45rem 0.75rem; border-radius: 6px;
+  font-size: 0.8125rem; font-weight: 500; color: var(--gray-600);
+  transition: color 0.15s, background 0.15s;
+}
+.dropdown-menu a:hover, .dropdown-menu a.active { color: var(--blue); background: var(--gray-100); }
+
+/* ── Mobile sub-links ────────────────────────────────────────────── */
+.nav-mobile.open a.mobile-sub {
+  padding-left: 2rem; font-size: 0.9375rem; color: var(--gray-600);
+}
+
 /* ── Hero ────────────────────────────────────────────────────────── */
 .hero { padding: 6rem 0 5rem; border-bottom: 1px solid var(--gray-200); }
 .hero h1 { margin-bottom: 1.5rem; max-width: 800px; }

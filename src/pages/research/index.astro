@@ -10,40 +10,35 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="page-header">
     <div class="container">
-      <span class="eyebrow">Salemi Group</span>
       <h1>Research</h1>
-      <p class="desc">
-        Our program spans dark matter searches, high-frequency gravitational wave detection,
-        and the development of quantum-limited lumped-element instrumentation.
-      </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
-      <h2 style="margin-bottom:1.5rem;color:var(--blue);">Detector Technologies</h2>
       <div class="grid-3" style="margin-bottom:4rem;">
-        <a href={`${base}/research/lumped-element-detectors/`} class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/lumped_element.jpeg');`}>
-          <h3 class="card-title">Lumped-Element Detectors</h3>
+        <a href="#science" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/lumped_element.jpeg');`}>
+          <h3 class="card-title">Science</h3>
         </a>
-        <a href={`${base}/research/quantum-sensing/`} class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/quantum_sense.jpeg');`}>
-          <h3 class="card-title">Quantum Sensing</h3>
+        <a href="#technology" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/quantum_sense.jpeg');`}>
+          <h3 class="card-title">Technology</h3>
         </a>
-        <a href={`${base}/research/bread/`} class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/bread_logo.png');`}>
-          <h3 class="card-title">BREAD</h3>
+        <a href="#experiments" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/bread_logo.png');`}>
+          <h3 class="card-title">Experiments</h3>
         </a>
       </div>
 
       <hr class="divider" style="margin-bottom:3rem;" />
 
-      <h2 style="margin-bottom:2rem;color:var(--blue);">Science</h2>
+      <!-- ── Science ── -->
+      <h2 id="science" class="section-heading" style="margin-bottom:2rem;color:var(--blue);">Science</h2>
 
       <div class="research-topic research-topic-img">
         <div class="research-topic-text">
           <h3>Dark Matter &amp; Axions</h3>
           <p>There is lots of evidence that the visible matter around us is only a small fraction of the matter in the universe. For example, we can observe the motion of galaxies inside galaxy clusters, and we can see that there has to be extra mass that is causing them to move differently than we would otherwise expect. So far, there have been no confirmed reports of the detection of a particle that could be this 'dark' matter. There are many theories as to what dark matter could be, and one of the most well-motivated ones is the axion</p>
-          <p>The axion was proposed as part of the solution to another longstanding problem in physics, the strong CP problem. In its essence, this is the problem that two unrelated parts of physics cancel each other out to one part in 1010, which we call a fine-tuning problem. The existence of axions would solve this, and as a bonus they do a great job of explaining the many anomalies that point to dark matter. Axions are hard to detect because they interact extremely feebly with the visible matter that makes up our detectors</p>
+          <p>The axion was proposed as part of the solution to another longstanding problem in physics, the strong CP problem. In its essence, this is the problem that two unrelated parts of physics cancel each other out to one part in 10<sup>10</sup>, which we call a fine-tuning problem. The existence of axions would solve this, and as a bonus they do a great job of explaining the many anomalies that point to dark matter. Axions are hard to detect because they interact extremely feebly with the visible matter that makes up our detectors</p>
           <a href={`${base}/research/dark-matter/`} class="read-more">Read more →</a>
         </div>
         <img src={`${base}/images/dark_matter.png`} alt="Dark matter illustration" class="research-topic-photo" />
@@ -51,18 +46,76 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <hr class="divider" style="margin: 2rem 0;" />
 
-      <div class="research-topic">
-        <h3>Gravitational Waves</h3>
-        <p>Coming soon.</p>
-        <a href={`${base}/research/gravitational-waves/`} class="read-more">Read more →</a>
+      <div class="research-topic research-topic-img">
+        <div class="research-topic-text">
+          <h3>Gravitational Waves</h3>
+          <p>
+            Gravitational waves are ripples in spacetime produced by accelerating masses. A passing wave stretches space in one direction while squeezing it in the perpendicular direction, producing a tiny fractional change in length called strain. Laser interferometers such as LIGO measure this strain by comparing the lengths of long perpendicular arms. Lumped-element detectors search in a different way. Instead of measuring moving mirrors, they uses a strong magnetic field and a sensitive electromagnetic pickup to look for the small current a gravitational wave can induce.
+          </p>
+          <a href={`${base}/research/gravitational-waves/`} class="read-more">Read more →</a>
+        </div>
+        <img src={`${base}/images/imagesligo20160211ligo-16.jpg`} alt="LIGO gravitational wave detector" class="research-topic-photo" />
       </div>
 
       <hr class="divider" style="margin: 2rem 0;" />
 
-      <div class="research-topic">
-        <h3>Non-Proliferation</h3>
-        <p>Coming soon.</p>
-        <a href={`${base}/research/non-proliferation/`} class="read-more">Read more →</a>
+      <div class="research-topic research-topic-img">
+        <div class="research-topic-text">
+          <h3>Neutrinos and Non-Proliferation</h3>
+          <p>Under construction.</p>
+          <a href={`${base}/research/non-proliferation/`} class="read-more">Read more →</a>
+        </div>
+        <img src={`${base}/images/foundry.jpg`} alt="Non-proliferation research" class="research-topic-photo" />
+      </div>
+
+      <hr class="divider" style="margin: 3rem 0;" />
+
+      <!-- ── Technology ── -->
+      <h2 id="technology" class="section-heading" style="margin-bottom:2rem;color:var(--blue);">Technology</h2>
+
+      <div class="research-topic research-topic-img">
+        <img src={`${base}/images/quantum_sense.jpeg`} alt="Quantum sensing apparatus" class="research-topic-photo" />
+        <div class="research-topic-text">
+          <h3>Quantum-Limited Receivers</h3>
+          <p>Under construction.</p>
+          <a href={`${base}/research/quantum-sensing/`} class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <hr class="divider" style="margin: 2rem 0;" />
+
+      <div class="research-topic research-topic-img">
+        <img src={`${base}/images/lumped_element.jpeg`} alt="Lumped-element detector" class="research-topic-photo" />
+        <div class="research-topic-text">
+          <h3>Lumped-Element Detectors</h3>
+          <p>Lumped-element detectors extend axion searches to sub-&mu;eV masses by treating the
+        experiment as a tunable LC circuit rather than a wavelength-sized cavity.
+        The DMRadio collaboration develops and characterizes this technology for next-generation experiments.</p>
+          <a href={`${base}/research/lumped-element-detectors/`} class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <hr class="divider" style="margin: 3rem 0;" />
+
+      <!-- ── Experiments ── -->
+      <h2 id="experiments" class="section-heading" style="margin-bottom:2rem;color:var(--blue);">Experiments</h2>
+
+      <div class="research-topic research-topic-img">
+        <div class="research-topic-text">
+          <h3>DMRadio</h3>
+          <p>Under construction.</p>
+        </div>
+        <img src={`${base}/images/dmr_logo.png`} alt="DMRadio logo" class="research-topic-photo" />
+      </div>
+
+      <hr class="divider" style="margin: 2rem 0;" />
+
+      <div class="research-topic research-topic-img research-topic-img-reversed">
+        <img src={`${base}/images/bread.png`} alt="BREAD experiment" class="research-topic-photo" />
+        <div class="research-topic-text">
+          <h3>BREAD</h3>
+          <p>Under construction.</p>
+        </div>
       </div>
 
     </div>
@@ -91,10 +144,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     text-shadow: 0 1px 4px rgba(0,0,0,0.6);
     margin: 0;
   }
+  html { scroll-behavior: smooth; }
+  .section-heading { scroll-margin-top: calc(var(--nav-h) + 8rem); }
   .research-topic-img {
     display: flex;
     align-items: flex-start;
     gap: 2.5rem;
+  }
+  .research-topic-img-reversed {
+    flex-direction: row-reverse;
   }
   .research-topic-text {
     flex: 1;
@@ -104,9 +162,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     height: auto;
     border-radius: var(--radius);
     flex-shrink: 0;
+    object-fit: cover;
   }
   @media (max-width: 640px) {
-    .research-topic-img { flex-direction: column; }
+    .research-topic-img,
+    .research-topic-img-reversed { flex-direction: column; }
     .research-topic-photo { width: 100%; }
   }
 </style>

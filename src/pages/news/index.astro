@@ -12,7 +12,6 @@ import Layout from '../../layouts/Layout.astro';
       <!-- <span class="eyebrow">Updates</span> -->
       <h1>News</h1>
       <p class="desc">
-        The latest news and updates from the Salemi Group.
       </p>
     </div>
   </section>
@@ -23,19 +22,18 @@ import Layout from '../../layouts/Layout.astro';
 
   <section class="section">
     <div class="container">
-      <span class="section-label"></span>
       <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
-
-
+      <h2 style="margin-top: 0px">2026</h2>
 
         <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
           <!-- Two-column container -->
           <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
             
-            <!-- Left Column: Image -->
-            <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/campanile.jpg" alt="Sather Tower" style="width: 100%; height: auto; display: block;">
+            <!-- Left Column: Two Images Grid (Total width stays 200px) -->
+            <div style="flex-shrink: 0; width: 200px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              <img src="../public/images/alainf_0.jpg" alt="Alain photo" style="width: 100%; height: auto; display: block;">
+              <img src="../public/images/brennan.png" alt="Brennan photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -45,7 +43,7 @@ import Layout from '../../layouts/Layout.astro';
                   <h3 style="margin-bottom:0.25rem;font-size:16px">June 18, 2026</h3>
                 </div>
               </div>
-              <p style="margin-bottom: 0;font-size:18px"">
+              <p style="margin-bottom: 0;font-size:18px">
                 Congratulations to Alain and Brennan on their award-winning poster presentations!<br>
                 • Alain won best poster at the 2026 Quantum Device Design Workshop at UCLA!<br> 
                 • Brennan won best poster at 2026 Radiation Impact on Superconducting Qubits (RISQ) at U. Wisconsin!<br>
@@ -58,14 +56,18 @@ import Layout from '../../layouts/Layout.astro';
 
 
 
-
         <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
           <!-- Two-column container -->
           <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
             
-            <!-- Left Column: Image -->
-            <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/campanile.jpg" alt="Sather Tower" style="width: 100%; height: auto; display: block;">
+            <!-- Left Column: 2-Row Photo Grid (200px width maintained) -->
+            <div style="flex-shrink: 0; width: 200px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              <!-- Row 1: Side-by-side images -->
+              <img src="../public/images/anish_photo.jpg" alt="Photo 1" style="width: 100%; height: auto; display: block;">
+              <img src="../public/images/aarav_0.jpg" alt="Photo 2" style="width: 100%; height: auto; display: block;">
+              
+              <!-- Row 2: Centered image spanning both columns -->
+              <img src="../public/images/brennan.png" alt="Photo 3" style="grid-column: 1 / -1; justify-self: center; width: 50%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -136,6 +138,32 @@ import Layout from '../../layouts/Layout.astro';
               </div>
               <p style="margin-bottom: 0;font-size:18px"">
                 Congratulations to Emily on completion of the Shining Lights program! (Photo: A.J. Gubser)
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <h2 style="margin-top: 50px">2025</h2>
+
+        <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
+          <!-- Two-column container -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            
+            <!-- Left Column: Image -->
+            <div style="flex-shrink: 0; width: 200px;">
+              <img src="../public/images/salemi_headshot_1.jpg" alt="Chiara Salemi picture" style="width: 100%; height: auto; display: block;">
+            </div>
+            
+            <!-- Right Column: Text Content -->
+            <div style="flex-grow: 1;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem;">
+                <div>
+                  <h3 style="margin-bottom:0.25rem;font-size:16px">October 30, 2025</h3>
+                </div>
+              </div>
+              <p style="margin-bottom: 0;font-size:18px"">
+                <a href="https://elements.lbl.gov/news/podcast-the-search-for-dark-matter/" style="color: #002676">Podcast: The Search for Dark Matter</a>
               </p>
             </div>
 
@@ -248,6 +276,8 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
        
+
+       <h2 style="margin-top: 50px">2024</h2>
 
 
 
