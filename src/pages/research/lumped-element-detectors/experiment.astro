@@ -24,12 +24,11 @@ const citations = [
     </div>
   </section>
 
-  <!-- What is DMRadio -->
+  <!-- What is DMRadio 
   <section class="section">
     <div class="container">
       <div class="two-col-60">
         <div>
-          <span class="section-label">The DMRadio Program</span>
           <h2 style="margin-bottom:1.25rem;">What is DMRadio?</h2>
           <p style="margin-bottom:1.25rem;">
             DMRadio is a resonant search for axion dark matter in the sub-&mu;eV mass range. In a strong static magnetic field, the axion-photon coupling modifies Maxwell's equations and produces a tiny effective oscillating current, which DMRadio detects with a coaxial inductive pickup coupled to a tunable LC resonator and a DC SQUID readout chain. Because the targeted axion masses correspond to wavelengths much larger than the detector, the apparatus operates in the lumped-element regime rather than as a conventional cavity haloscope.
@@ -41,6 +40,8 @@ const citations = [
       </div>
     </div>
   </section>
+
+-->
 
   <hr class="divider">
 
@@ -68,36 +69,10 @@ const citations = [
     <div class="container">
       <div class="two-col-60">
         <div>
-          <span class="section-label">Detection Principle</span>
-          <h2 style="margin-bottom:1.25rem;">How Lumped-Element Detection Works</h2>
+          <h2 style="margin-bottom:1.25rem;">Detection Principle</h2>
           <p style="margin-bottom:1.25rem;">
-            In a conventional microwave cavity haloscope, the detector volume must be comparable to
-            the photon wavelength at the target axion frequency, which confines cavity-based searches
-            to axion masses above roughly 1&nbsp;&mu;eV. In the <em>lumped-element regime</em>&mdash;
-            applicable when the target wavelength far exceeds the detector size&mdash;the axion-induced
-            electromagnetic signal can instead be treated as a spatially uniform effective current
-            driving a simple LC circuit. The detector is characterized by its inductance and capacitance
-            rather than by cavity mode structure, so pickup volume and magnet volume can be scaled
-            independently of the target frequency. This opens the sub-&mu;eV mass window that cavity
-            haloscopes cannot reach.
-          </p>
-          <p style="margin-bottom:1.25rem;">
-            An axion traversing a strong static magnetic field acquires an effective coupling to the
-            electromagnetic field, producing a faint oscillating magnetic flux in a nearby inductive
-            pickup coil. When the LC resonator is tuned so that its resonant frequency matches the
-            axion oscillation frequency (&omega;<sub>a</sub>&nbsp;=&nbsp;m<sub>a</sub>c<sup>2</sup>/&hbar;),
-            the quality factor Q enhances the axion-induced signal power relative to the thermal noise
-            floor. Scanning the resonance over time&mdash;via variable capacitors or switched
-            elements&mdash;allows the experiment to cover a continuous range of axion masses.
-          </p>
-          <p style="margin-bottom:1.25rem;">
-            CAL Pathfinder implements this concept using a solenoidal superconducting magnet, a coaxial
-            inductive pickup surrounding the field volume, and a DC SQUID amplifier chain operating
-            near 20&nbsp;mK. The SQUID provides quantum-limited noise performance essential for
-            detecting the extraordinarily faint axion-induced currents at the target sensitivity. As a
-            pathfinder instrument, CAL validates the lumped-element detection principle at scale,
-            characterizes parasitic modes and loss mechanisms in the resonator, and develops the
-            cryogenic readout hardware required for larger DMRadio-class experiments.
+            CAL-Pathfinder relies on the lumped-element technique for axion detection. A 9 T solenoidal superconducting magnet is attached to a Bluefors LD400 dilution refrigerator. An inductive, coaxial pickup hangs off the mixing chamber of the dilution fridge and resides within the bore of the magnet. Attached to the pickup is a tunable capacitor. Axion interactions with the magnetic field induce a current on the surface of the pickup. These induced currents travel through the LC circuit formed by the pickup and capacitor and are read out by a DC SQUID amplifier chain. The pickup, capacitor, and SQUID amplifiers all operate at temperatures near 20 mK. The SQUID provides quantum-limited noise performance essential for
+            detecting the extraordinarily faint axion-induced currents at the target sensitivity. As a pathfinder instrument, CAL-Pathfinder will validate the lumped-element detection principle at frequencies above 100 MHz, demonstrate the performance of a solenoidal superconducting magnet and coaxial pickup structure, and develops the cryogenic readout hardware required for future, larger DMRadio experiments.
           </p>
         </div>
         <div style="display:flex;flex-direction:column;gap:1rem;">
@@ -115,7 +90,6 @@ const citations = [
   <!-- Interactive diagram -->
   <section class="section-sm">
     <div class="container">
-      <span class="section-label">Interactive Diagram</span>
       <h2 style="margin-bottom:1.5rem;">Explore the Experiment</h2>
       <div class="hotspot-layout">
 
@@ -126,32 +100,32 @@ const citations = [
             class="hotspot-image"
           />
 
-          <div class="hotspot" style="left:65%;top:85%;" data-label="Magnet" data-desc="CAL Pathfinder utilizes a solenoid for lumped element detection, this magnet is 9T and will be thermalized at 4K, in the dilution fridge. Axion-photon conversion is driven by the inverse primakoff effect, in which axions are converted to photons and an axion B-field is generated, the quantity we wish to detect.">
+          <div class="hotspot" style="left:65%;top:85%;" data-label="Magnet" data-img="" data-desc="CAL Pathfinder utilizes a solenoid for lumped element detection, this magnet is 9T and will be thermalized at 4K, in the dilution fridge. Axion-photon conversion is driven by the inverse primakoff effect, in which axions are converted to photons and an axion B-field is generated, the quantity we wish to detect.">
             <button class="hotspot-btn" aria-label="Magnet">+</button>
             <span class="hotspot-label">Magnet</span>
           </div>
 
-          <div class="hotspot" style="left:50%;top:68%;" data-label="Coaxial pickup" data-desc="The axion signal acts as an effective current source that is inductively coupled to the LC resonator, which is tuned to the axion mass via a tunable capacitor. The tunability of the resonator allows us to search over a broader frequency range.">
+          <div class="hotspot" style="left:50%;top:68%;" data-label="Coaxial pickup" data-img="" data-desc="The axion signal acts as an effective current source that is inductively coupled to the LC resonator, which is tuned to the axion mass via a tunable capacitor. The tunability of the resonator allows us to search over a broader frequency range.">
             <button class="hotspot-btn" aria-label="Coaxial pickup">+</button>
             <span class="hotspot-label">Coaxial pickup</span>
           </div>
 
-          <div class="hotspot" style="left:35%;top:30%;" data-label="Cryogenic System" data-desc="The CAL experiment will be housed in a Bluefors LD400 dilution refrigerator. The fridge will also be equipped with a 9T solenoidal magnet from American Magnetics, Inc., which is designed to mate with the plates of the LD400 and share vacuum and cryocooling. The targeted system temperature for CAL Pathfinder is 20mK.">
+          <div class="hotspot" style="left:35%;top:30%;" data-label="Cryogenic System" data-img="" data-desc="The CAL experiment will be housed in a Bluefors LD400 dilution refrigerator. The fridge will also be equipped with a 9T solenoidal magnet from American Magnetics, Inc., which is designed to mate with the plates of the LD400 and share vacuum and cryocooling. The targeted system temperature for CAL Pathfinder is 20mK.">
             <button class="hotspot-btn" aria-label="Cryogenic System">+</button>
             <span class="hotspot-label">Cryogenic System</span>
           </div>
 
-          <div class="hotspot" style="left:35%;top:44%;" data-label="SQUIDs" data-desc="The amplifier chain consists of a first stage single dc SQUID, followed by a strongly coupled second stage SQUID array and a cryogenic follow-on RF amplifier.[cite:ankel2025] With this system, we can achieve a noise performance that is only a factor of 10-20 above the SQL (Standard Quantum Limit) at the frequencies we are interested in here.">
+          <div class="hotspot" style="left:35%;top:44%;" data-label="SQUIDs" data-img="" data-desc="The amplifier chain consists of a first stage single dc SQUID, followed by a strongly coupled second stage SQUID array and a cryogenic follow-on RF amplifier.[cite:ankel2025] With this system, we can achieve a noise performance that is only a factor of 10-20 above the SQL (Standard Quantum Limit) at the frequencies we are interested in here.">
             <button class="hotspot-btn" aria-label="SQUIDs">+</button>
             <span class="hotspot-label">SQUIDs</span>
           </div>
 
-          <div class="hotspot" style="left:63%;top:44%;" data-label="Low-field box" data-desc="Coming soon.">
+          <div class="hotspot" style="left:63%;top:44%;" data-label="Low-field box" data-img="" data-desc="Coming soon.">
             <button class="hotspot-btn" aria-label="Low-field box">+</button>
             <span class="hotspot-label">Low-field box</span>
           </div>
 
-          <div class="hotspot" style="left:54%;top:34%;" data-label="Tunable capacitor" data-desc="Coming soon.">
+          <div class="hotspot" style="left:54%;top:34%;" data-label="Tunable capacitor" data-img="" data-desc="Coming soon.">
             <button class="hotspot-btn" aria-label="Tunable capacitor">+</button>
             <span class="hotspot-label">Tunable capacitor</span>
           </div>
@@ -170,7 +144,6 @@ const citations = [
   <!-- References -->
   <section class="section">
     <div class="container">
-      <span class="section-label">References</span>
       <h2 style="margin-bottom:1.5rem;">Sources</h2>
       <div style="max-width:800px;">
         <ol style="font-size:0.9rem;line-height:1.8;color:var(--gray-700);padding-left:1.5rem;">
@@ -287,6 +260,12 @@ const citations = [
     color: var(--blue);
     margin-bottom: 0.75rem;
   }
+  .hotspot-info-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin-top: 1rem;
+  }
   @media (max-width: 700px) {
     .hotspot-layout { flex-direction: column; }
     .hotspot-wrapper { max-width: 100%; }
@@ -321,7 +300,9 @@ const citations = [
         hotspot.classList.add('active');
         const label = hotspot.dataset.label;
         const desc = renderDesc(hotspot.dataset.desc);
-        info.innerHTML = `<h3>${label}</h3><p>${desc}</p>`;
+        const img = hotspot.dataset.img;
+        const imgHtml = img ? `<img src="${img}" alt="${label}" class="hotspot-info-img" />` : '';
+        info.innerHTML = `<h3>${label}</h3><p>${desc}</p>${imgHtml}`;
       }
     });
   });
