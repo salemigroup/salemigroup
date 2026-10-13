@@ -18,13 +18,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="container">
 
       <div class="grid-3" style="margin-bottom:4rem;">
-        <a href="#science" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/lumped_element.jpeg');`}>
+        <a href="#science" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/bullet-cluster.jpg');`}>
           <h3 class="card-title">Science</h3>
         </a>
         <a href="#technology" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/quantum_sense.jpeg');`}>
           <h3 class="card-title">Technology</h3>
         </a>
-        <a href="#experiments" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/bread_logo.png');`}>
+        <a href="#experiments" class="card card-grow" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/coax_assembly1.jpg'); background-position: center 30%;`}>
           <h3 class="card-title">Experiments</h3>
         </a>
       </div>
@@ -76,7 +76,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <div class="research-topic research-topic-img">
         <img src={`${base}/images/quantum_sense.jpeg`} alt="Quantum sensing apparatus" class="research-topic-photo" />
         <div class="research-topic-text">
-          <h3>Quantum-Limited Receivers</h3>
+          <h3>Quantum Sensors</h3>
           <p>Under construction.</p>
           <a href={`${base}/research/quantum-sensing/`} class="read-more">Read more →</a>
         </div>
@@ -102,15 +102,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       <div class="research-topic research-topic-img">
         <div class="research-topic-text">
-          <h3>DMRadio</h3>
+          <h3>CAL-Pathfinder</h3>
           <p>Under construction.</p>
+          <a href={`${base}/research/lumped-element-detectors/cal-pathfinder/`} class="read-more">Read more →</a>
         </div>
-        <img src={`${base}/images/dmr_logo.png`} alt="DMRadio logo" class="research-topic-photo" />
+        <img src={`${base}/images/cal-path_placeholder.png`} alt="CAL-Pathfinder experiment" class="research-topic-photo" />
       </div>
 
       <hr class="divider" style="margin: 2rem 0;" />
 
       <div class="research-topic research-topic-img research-topic-img-reversed">
+        <img src={`${base}/images/50L_cryostat.png`} alt="DMRadio-50L cryostat" class="research-topic-photo" />
+        <div class="research-topic-text">
+          <h3>DMRadio-50L</h3>
+          <p>Under construction.</p>
+        </div>
+      </div>
+
+      <hr class="divider" style="margin: 2rem 0;" />
+
+      <div class="research-topic research-topic-img">
         <img src={`${base}/images/bread.png`} alt="BREAD experiment" class="research-topic-photo" />
         <div class="research-topic-text">
           <h3>BREAD</h3>

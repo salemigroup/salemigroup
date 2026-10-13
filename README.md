@@ -2,7 +2,9 @@
 
 Official website for the CAL-Pathfinder dark matter experiment at UC Berkeley.
 
-**Live site:** https://graybert.github.io/CAL-DMRadio/
+**Live site:** https://graybert.github.io/salemigroup/
+
+> **⚠️ Repo rename pending:** The GitHub repository must be renamed from `CAL-DMRadio-Website` to `salemigroup` for the live URL above to work. The `astro.config.mjs` has already been updated to use `/salemigroup` as the base path.
 
 Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
@@ -33,8 +35,8 @@ You'll need:
 
 1. **Clone the repository** (first time only)
    ```sh
-   git clone https://github.com/[YOUR-ORG]/CAL-DMRadio.git
-   cd CAL-DMRadio
+   git clone https://github.com/graybert/salemigroup.git
+   cd salemigroup
    ```
 
 2. **Install dependencies** (first time only, or after pulling new changes)
@@ -47,9 +49,9 @@ You'll need:
    npm run dev
    ```
 
-4. **Open in browser:** http://localhost:4321/CAL-DMRadio/
+4. **Open in browser:** http://localhost:4321/salemigroup/
 
-   > The `/CAL-DMRadio/` path is required because of GitHub Pages base URL settings.
+   > The `/salemigroup/` path is required because of GitHub Pages base URL settings.
 
 5. **Edit files** - The site auto-reloads when you save changes!
 
@@ -493,7 +495,7 @@ Available color variables (use in `style="color:var(--name)"`):
 ### Tips for Editing
 
 **Do:**
-- Save often and check `http://localhost:4321/CAL-DMRadio/` in your browser
+- Save often and check `http://localhost:4321/salemigroup/` in your browser
 - Copy existing sections and modify them (easier than starting from scratch)
 - Use consistent spacing: `margin-bottom:1.25rem;` between paragraphs
 - Keep HTML structure intact (don't delete closing tags)
@@ -643,11 +645,11 @@ Valid types: `paper`, `preprint`, `thesis`, `slides`.
 
 ```sh
 npm run build      # outputs to ./dist/
-npm run preview    # preview the production build locally at http://localhost:4321/CAL-DMRadio/
+npm run preview    # preview the production build locally at http://localhost:4321/salemigroup/
 ```
 
 GitHub Actions automatically builds and deploys on every push to `main`.
-The live site will be at: **https://graybert.github.io/CAL-DMRadio/**
+The live site will be at: **https://graybert.github.io/salemigroup/**
 
 ---
 
@@ -662,7 +664,7 @@ The site **automatically deploys** when you push to the **`template`** branch.
 **How it works:**
 1. You push changes to the `template` branch
 2. GitHub Actions automatically builds the site
-3. The built site deploys to https://graybert.github.io/CAL-DMRadio/
+3. The built site deploys to https://graybert.github.io/salemigroup/
 
 **To switch to deploying from `main`:**
 1. Open `.github/workflows/deploy.yml`
@@ -674,7 +676,7 @@ The site **automatically deploys** when you push to the **`template`** branch.
 To build the site locally:
 ```sh
 npm run build      # Outputs to ./dist/
-npm run preview    # Preview production build at http://localhost:4321/CAL-DMRadio/
+npm run preview    # Preview production build at http://localhost:4321/salemigroup/
 ```
 
 ### GitHub Pages Setup
@@ -689,7 +691,7 @@ Already configured, but for reference:
 ## Project Structure
 
 ```
-CAL-DMRadio/
+salemigroup/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # Automatic deployment config

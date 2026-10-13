@@ -13,7 +13,7 @@ const citations = [
 ---
 
 <Layout
-  title="The Experiment"
+  title="CAL-Pathfinder"
   description="How the CAL DMRadio experiment works: solenoidal LC resonator, SQUID amplifiers, and quantum-limited axion searches."
 >
 
@@ -52,12 +52,17 @@ const citations = [
         <div>
           <h2 style="margin-bottom:1.25rem;">CAL-Pathfinder</h2>
           <p style="margin-bottom:1.25rem;">
-            The Cal Axion LC (CAL-Pathfinder) experiment develops and characterizes the coaxial pickup and tunable LC resonator architecture used in DMRadio's lumped-element axion search. In this design, the coaxial pickup converts the axion-induced electromagnetic response into a measurable circuit signal, while the tunable LC resonator sets the resonant frequency and provides the narrowband enhancement needed for sensitive readout.
-          </p>
-          <p style="margin-bottom:0;">
-            Characterization means measuring not only where the device resonates, but how sharply it resonates, how smoothly it tunes, and whether its electromagnetic field structure matches the intended mode. In practice, this is done through resonance-curve measurements, tuning studies, comparison to simulation, and bead-pull measurements, in which a small perturbing bead is moved through the structure to map the field distribution by tracking shifts in resonant frequency. Together, these measurements reveal distortions, parasitic modes, and other non-ideal effects that determine whether the coaxial resonator is suitable for a precision axion search.
+            Cal Axion LC (CAL-Pathfinder) is a lumped-element detector searching for axions in the 0.45 - 0.55 μeV mass range, corresponding to frequencies around 100 MHz. CAL-Pathfinder will not only be sensitive to an unexplored range of axion masses, but will also serve as a testbed for experimental techniques required for future, more sensitive lumped-element detectors. The experiment will demonstrate the feasability of the solenoid magnet geometry and be a platform for testing SQUID amplifiers designed to operated at these frequencies.
           </p>
         </div>
+        <figure style="margin:0;">
+          <img
+            src={`${base}/images/coax_assembly1.jpg`}
+            alt="Coaxial pickup assembly"
+            style="width:100%;border-radius:0.5rem;"
+          />
+          <figcaption style="font-size:0.85rem;color:var(--gray-600);margin-top:0.4rem;">Coaxial pickup assembly. The inductive pickup hangs from the mixing chamber of the dilution refrigerator and sits within the magnet bore.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -67,20 +72,35 @@ const citations = [
   <!-- How Lumped-Element Works -->
   <section class="section">
     <div class="container">
-      <div class="two-col-60">
-        <div>
-          <h2 style="margin-bottom:1.25rem;">Detection Principle</h2>
-          <p style="margin-bottom:1.25rem;">
-            CAL-Pathfinder relies on the lumped-element technique for axion detection. A 9 T solenoidal superconducting magnet is attached to a Bluefors LD400 dilution refrigerator. An inductive, coaxial pickup hangs off the mixing chamber of the dilution fridge and resides within the bore of the magnet. Attached to the pickup is a tunable capacitor. Axion interactions with the magnetic field induce a current on the surface of the pickup. These induced currents travel through the LC circuit formed by the pickup and capacitor and are read out by a DC SQUID amplifier chain. The pickup, capacitor, and SQUID amplifiers all operate at temperatures near 20 mK. The SQUID provides quantum-limited noise performance essential for
-            detecting the extraordinarily faint axion-induced currents at the target sensitivity. As a pathfinder instrument, CAL-Pathfinder will validate the lumped-element detection principle at frequencies above 100 MHz, demonstrate the performance of a solenoidal superconducting magnet and coaxial pickup structure, and develops the cryogenic readout hardware required for future, larger DMRadio experiments.
-          </p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
-          <div class="diagram-placeholder">
-            <p><strong>Detector schematic</strong></p>
-            <p>Coaxial pickup coil + SQUID chain</p>
-          </div>
-        </div>
+      <h2 style="margin-bottom:1.25rem;">Detection Principle</h2>
+      <p style="margin-bottom:2rem;max-width:800px;">
+        CAL-Pathfinder relies on the lumped-element technique for axion detection. A 9 T solenoidal superconducting magnet is attached to a Bluefors LD400 dilution refrigerator. An inductive, coaxial pickup hangs off the mixing chamber of the dilution fridge and resides within the bore of the magnet. Attached to the pickup is a tunable capacitor. Axion interactions with the magnetic field induce a current on the surface of the pickup. These induced currents travel through the LC circuit formed by the pickup and capacitor and are read out by a DC SQUID amplifier chain. The pickup, capacitor, and SQUID amplifiers all operate at temperatures near 20 mK.
+      </p>
+      <div class="three-photo-grid">
+        <figure style="margin:0;">
+          <img
+            src={`${base}/images/tuner_assembly.jpg`}
+            alt="Tuner assembly"
+            style="width:100%;border-radius:0.5rem;"
+          />
+          <figcaption style="font-size:0.85rem;color:var(--gray-600);margin-top:0.4rem;">Tunable capacitor test stand. The tunable capacitor sets the LC resonant frequency and allows the experiment to scan across a range of axion masses.</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <img
+            src={`${base}/images/coax_precoating.jpg`}
+            alt="Coaxial pickup before superconducting coating"
+            style="width:100%;border-radius:0.5rem;"
+          />
+          <figcaption style="font-size:0.85rem;color:var(--gray-600);margin-top:0.4rem;">Coaxial pickup before copper coating is applied.</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <img
+            src={`${base}/images/cryoamp.jpg`}
+            alt="Cryogenic SQUID amplifier chain"
+            style="width:100%;border-radius:0.5rem;"
+          />
+          <figcaption style="font-size:0.85rem;color:var(--gray-600);margin-top:0.4rem;">Cryogenic RF amplifier used as part of cold readout, further amplifies the output signal from the SQUIDs (not pictured)</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -100,32 +120,32 @@ const citations = [
             class="hotspot-image"
           />
 
-          <div class="hotspot" style="left:65%;top:85%;" data-label="Magnet" data-img="" data-desc="CAL Pathfinder utilizes a solenoid for lumped element detection, this magnet is 9T and will be thermalized at 4K, in the dilution fridge. Axion-photon conversion is driven by the inverse primakoff effect, in which axions are converted to photons and an axion B-field is generated, the quantity we wish to detect.">
+          <div class="hotspot" style="left:65%;top:85%;" data-label="Magnet" data-img={`${base}/images/cal_magnet.png`} data-desc="CAL Pathfinder utilizes a 9 T solenoid magnet is 9T. The magnet is thermalized at 4 K.">
             <button class="hotspot-btn" aria-label="Magnet">+</button>
             <span class="hotspot-label">Magnet</span>
           </div>
 
-          <div class="hotspot" style="left:50%;top:68%;" data-label="Coaxial pickup" data-img="" data-desc="The axion signal acts as an effective current source that is inductively coupled to the LC resonator, which is tuned to the axion mass via a tunable capacitor. The tunability of the resonator allows us to search over a broader frequency range.">
+          <div class="hotspot" style="left:50%;top:68%;" data-label="Coaxial pickup" data-img={`${base}/images/coax_precoating.jpg`} data-desc="The axion signal acts as an effective current source and induces a current on the coaxial pickup. The pickup is the inductive component of the LC circuit. The pickup structure is made of copper-coated stainless steel.">
             <button class="hotspot-btn" aria-label="Coaxial pickup">+</button>
             <span class="hotspot-label">Coaxial pickup</span>
           </div>
 
-          <div class="hotspot" style="left:35%;top:30%;" data-label="Cryogenic System" data-img="" data-desc="The CAL experiment will be housed in a Bluefors LD400 dilution refrigerator. The fridge will also be equipped with a 9T solenoidal magnet from American Magnetics, Inc., which is designed to mate with the plates of the LD400 and share vacuum and cryocooling. The targeted system temperature for CAL Pathfinder is 20mK.">
+          <div class="hotspot" style="left:35%;top:30%;" data-label="Cryogenic System" data-img="" data-desc="CAL-Pathfiner will be housed in a Bluefors LD400 dilution refrigerator. The targeted operating temperature for CAL-Pathfinder is 20mK.">
             <button class="hotspot-btn" aria-label="Cryogenic System">+</button>
             <span class="hotspot-label">Cryogenic System</span>
           </div>
 
-          <div class="hotspot" style="left:35%;top:44%;" data-label="SQUIDs" data-img="" data-desc="The amplifier chain consists of a first stage single dc SQUID, followed by a strongly coupled second stage SQUID array and a cryogenic follow-on RF amplifier.[cite:ankel2025] With this system, we can achieve a noise performance that is only a factor of 10-20 above the SQL (Standard Quantum Limit) at the frequencies we are interested in here.">
+          <div class="hotspot" style="left:35%;top:44%;" data-label="SQUIDs" data-img={`${base}/images/cryoamp.jpg`} data-desc="The amplifier chain consists of a first stage single DC SQUID, followed by a strongly coupled second stage SQUID array and a cryogenic follow-on RF amplifier.[cite:ankel2025] With this system, we can achieve a noise performance that is only a factor of 10-20 above the SQL (Standard Quantum Limit) at the frequencies of interest.">
             <button class="hotspot-btn" aria-label="SQUIDs">+</button>
             <span class="hotspot-label">SQUIDs</span>
           </div>
 
-          <div class="hotspot" style="left:63%;top:44%;" data-label="Low-field box" data-img="" data-desc="Coming soon.">
+          <div class="hotspot" style="left:63%;top:44%;" data-label="Low-field box" data-img="" data-desc="The SQUIDs and tunable capacitor will reside in a shielded box that is designed to reduce the fringe fields from the magnet. The box will consist of a combination of shielding materials and cancellation coils to reduce the field.">
             <button class="hotspot-btn" aria-label="Low-field box">+</button>
             <span class="hotspot-label">Low-field box</span>
           </div>
 
-          <div class="hotspot" style="left:54%;top:34%;" data-label="Tunable capacitor" data-img="" data-desc="Coming soon.">
+          <div class="hotspot" style="left:54%;top:34%;" data-label="Tunable capacitor" data-img={`${base}/images/tuner_assembly.jpg`} data-desc="The tunable capacitor forms the capacitve component of the LC circuit. The capacitior is a Niobium coax. The effective length of the capacitor can be adjusted during operation to tune over different capacitance values. ">
             <button class="hotspot-btn" aria-label="Tunable capacitor">+</button>
             <span class="hotspot-label">Tunable capacitor</span>
           </div>
@@ -170,6 +190,16 @@ const citations = [
 </Layout>
 
 <style>
+  /* ── Photo grid ── */
+  .three-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  @media (max-width: 700px) {
+    .three-photo-grid { grid-template-columns: 1fr; }
+  }
+
   /* ── Hotspot diagram ── */
   .hotspot-layout {
     display: flex;
