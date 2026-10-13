@@ -21,31 +21,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div>
           <h2 style="margin-bottom:1.25rem;">How Lumped-Element Detection Works</h2>
           <p style="margin-bottom:1.25rem;">
-            In a conventional microwave cavity haloscope, the detector volume must be comparable to
-            the photon wavelength at the target axion frequency, which confines cavity-based searches
-            to axion masses above roughly 1&nbsp;&mu;eV. In the <em>lumped-element regime </em>&mdash;
-            applicable when the target wavelength far exceeds the detector size &mdash; the axion-induced
-            electromagnetic signal can instead be treated as a spatially uniform effective current
-            driving a simple LC circuit. The detector is characterized by its inductance and capacitance
-            rather than by cavity mode structure, so pickup volume and magnet volume can be scaled
-            independently of the target frequency. This opens the sub-&mu;eV mass window that cavity
-            haloscopes cannot reach.
-          </p>
+            In a conventional microwave cavity haloscope, the detector volume must be comparable to the Compton wavelength at the target axion frequency, which confines cavity-based searches to axion masses above roughly 1&nbsp;&mu;eV. At lower masses, the Compton wavelength far exceeds the detector size, rendering microwave cavities as an unviable detection method. At these wavelengths, the axion-induced signal is in phase across the entire detector and all the detector components can be represented as standard circuit elements (inductors, resistors, etc.). This is the <em>lumped-element regime </em>.
+            </p>
+
           <p style="margin-bottom:1.25rem;">
-            An axion traversing a strong static magnetic field acquires an effective coupling to the
-            electromagnetic field, producing a faint oscillating magnetic flux in a nearby inductive
-            pickup coil. When the LC resonator is tuned so that its resonant frequency matches the
-            axion oscillation frequency (&omega;<sub>a</sub>&nbsp;=&nbsp;m<sub>a</sub>c<sup>2</sup>/&hbar;),
-            the quality factor Q enhances the axion-induced signal power relative to the thermal noise
-            floor. Scanning the resonance over time&mdash;via variable capacitors or switched
-            elements&mdash;allows the experiment to cover a continuous range of axion masses.
+            In the lumped-element regime, the axion acts as an effective current source. A superconducting pickup can be used to measure the induced current in response to the axion signal. The pickup is connected to an LC resonator, an electrical circuit that responds strongly to one particular frequency. When this frequency matches the axion signal, the signal is greatly enhanced. Finally, a quantum sensor measures and further amplifies the signal. The resonant frequency of a lumped-element detector can be tuned, like a radio, enabling the detector to cover a large range of possible axion masses.
           </p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
-          <div class="diagram-placeholder">
-            <p><strong>Detector schematic</strong></p>
-            <p>Coaxial pickup coil + SQUID chain</p>
-          </div>
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <figure style="margin:0;">
+            <img src={`${base}/images/lumped_element_circuit.png`} alt="Lumped-element circuit diagram" style="width:100%;border-radius:0.5rem;" />
+            <figcaption style="font-size:0.85rem;color:var(--gray-600);margin-top:0.4rem;">A circuit diagram of a lumped-element detector. The axion signal is represented as a current source and couples to the LC resonator via a transformer. A SQUID is used as the quantum sensor that amplifies the signal.</figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <img src={`${base}/images/lumped_element.jpeg`} alt="Lumped-element detector" style="width:100%;border-radius:0.5rem;" />
+            <figcaption style="font-size:0.85rem;color:var(--gray-600);margin-top:0.4rem;">A diagram of the axion induced currents and fields on the DMRadio-50L detector. The effective axion current <em>J</em><sub>eff</sub> induces a magnetic field in the center of the detector. This yields an induced current, <em>J</em><sub>ind</sub>, on the surface of the detector that can be read out.</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -53,25 +44,43 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="section">
     <div class="container">
+      <h2 style="margin-bottom:1.25rem;">Current-Generation Experiments</h2>
+      <p style="margin-bottom:1.5rem;">Our group is a member of the DMRadio collaboration. DMRadio is pioneering the development of lumped-element detectors to search for axions a neV masses. There are two current-generation lumped-element experiments in the DMRadio program. DMRadio-50L uses a toroidal magnet and is currently commissioning at Stanford. CAL-Pathfinder is a demonstrator for using solenoid magnets and is under construction at UC Berkeley. Both experiments will reach unexplored areas of the axion parameter space, while also paving the way for future, large scale lumped-element detectors.
+      </p>
       <div class="grid-2">
 
-        <a href={`${base}/research/lumped-element-detectors/cal-pathfinder/`} class="card" style="text-decoration:none;color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">CAL-Pathfinder</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            How CAL-Pathfinder works: solenoidal LC resonator, SQUID amplifiers,
-            and cryogenic readout.
-          </p>
+        <a href={`${base}/research/lumped-element-detectors/cal-pathfinder/`} class="card card-bg" style={`text-decoration:none; background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/coax_assembly1.jpg'); background-position: center 27%;`}>
+          <h3 class="card-bg-title">CAL-Pathfinder</h3>
         </a>
 
-        <div class="card" style="color:inherit;display:block;">
-          <h3 style="margin-bottom:0.5rem;color:var(--blue);">DMRadio-50L</h3>
-          <p style="font-size:0.9rem;color:var(--gray-600);">
-            The DMRadio-50L experiment: design, construction, and science reach.
-          </p>
+        <div class="card card-bg" style={`background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.6)), url('${base}/images/50l_renessaince_photo.png'); background-position: center;`}>
+          <h3 class="card-bg-title">DMRadio-50L</h3>
         </div>
 
       </div>
     </div>
   </section>
+
+  <style>
+    .card-bg {
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      border: none;
+      transition: min-height 0.3s, box-shadow 0.2s, transform 0.2s;
+    }
+    .card-bg:hover {
+      min-height: 300px;
+    }
+    .card-bg-title {
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      margin: 0;
+      text-align: center;
+    }
+  </style>
 
 </Layout>
