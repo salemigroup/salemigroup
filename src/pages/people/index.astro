@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -30,7 +31,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 300px;">
-              <img src="../public/images/salemi_headshot_1.jpg" alt="Chiara Salemi picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/salemi_headshot_1.jpg`} alt="Chiara Salemi picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -48,7 +49,7 @@ import Layout from '../../layouts/Layout.astro';
                 She then went to Stanford and SLAC National Lab as a Porat Postdoctoral Fellow, where she continued working on lumped-element axion searches as well as on reflector-based axion detection and the development of superconducting qubit-based sensors. 
                 Outside of physics, she likes climbing mountains, cooking for large numbers of people, and spending time with her husband and dog.<br><br>
 
-                <a href="../public/images/cpscv.pdf" style="color: #FDB515" target="_blank" rel="noopener noreferrer">CV</a>
+                <a href={`${base}/images/cpscv.pdf`} style="color: #FDB515" target="_blank" rel="noopener noreferrer">CV</a>
               </p>
             </div>
 
@@ -79,7 +80,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/emily_final-1.jpg" alt="Emily Perry picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/emily_final-1.jpg`} alt="Emily Perry picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -107,7 +108,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/ryang_headshot_4.jpg" alt="Ryan Gibbons picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/ryang_headshot_4.jpg`} alt="Ryan Gibbons picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -136,7 +137,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/erin.jpg" alt="Erin Engelhardt picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/erin.jpg`} alt="Erin Engelhardt picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -186,7 +187,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/shreya_website_0.jpg" alt="Shreya Puranam picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/shreya_website_0.jpg`} alt="Shreya Puranam picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -222,7 +223,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/alainf_0.jpg" alt="Alain Fauquex picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/alainf_0.jpg`} alt="Alain Fauquex picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -255,7 +256,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/penelope_0.jpeg" alt="Penelope Quassolo picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/penelope_0.jpeg`} alt="Penelope Quassolo picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -290,7 +291,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/Abel.jpeg" alt="Abel Shiferaw picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/Abel.jpeg`} alt="Abel Shiferaw picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -344,7 +345,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/Holden.png" alt="Holden Kowitt picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/Holden.png`} alt="Holden Kowitt picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -375,7 +376,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/brennan.png" alt="Brennan Coffey picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/brennan.png`} alt="Brennan Coffey picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -408,7 +409,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/Robert.jpg" alt="Robert Woodward-Hartman photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/Robert.jpg`} alt="Robert Woodward-Hartman photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -436,7 +437,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/alex.jpg" alt="Alex Halpin photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/alex.jpg`} alt="Alex Halpin photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -465,7 +466,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/ariyan.png" alt="Ariyan Jazaeri photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/ariyan.png`} alt="Ariyan Jazaeri photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -494,7 +495,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/dianoosh.jpg" alt="Dianoosh Sabetnejad photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/dianoosh.jpg`} alt="Dianoosh Sabetnejad photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -523,7 +524,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/EvanSquarePhoto.jpg" alt="Evan Melgar photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/EvanSquarePhoto.jpg`} alt="Evan Melgar photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -553,7 +554,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/eric.png" alt="Eric Du photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/eric.png`} alt="Eric Du photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -582,7 +583,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/Gabriella.jpg" alt="Gabriella Bensadoun photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/Gabriella.JPG`} alt="Gabriella Bensadoun photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -32,8 +33,8 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Two Images Grid (Total width stays 200px) -->
             <div style="flex-shrink: 0; width: 200px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-              <img src="../public/images/alainf_0.jpg" alt="Alain photo" style="width: 100%; height: auto; display: block;">
-              <img src="../public/images/brennan.png" alt="Brennan photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/alainf_0.jpg`} alt="Alain photo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/brennan.png`} alt="Brennan photo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -63,11 +64,11 @@ import Layout from '../../layouts/Layout.astro';
             <!-- Left Column: 2-Row Photo Grid (200px width maintained) -->
             <div style="flex-shrink: 0; width: 200px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
               <!-- Row 1: Side-by-side images -->
-              <img src="../public/images/anish_photo.jpg" alt="Photo 1" style="width: 100%; height: auto; display: block;">
-              <img src="../public/images/aarav_0.jpg" alt="Photo 2" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/anish_photo.jpg`} alt="Photo 1" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/aarav_0.jpg`} alt="Photo 2" style="width: 100%; height: auto; display: block;">
               
               <!-- Row 2: Centered image spanning both columns -->
-              <img src="../public/images/brennan.png" alt="Photo 3" style="grid-column: 1 / -1; justify-self: center; width: 50%; height: auto; display: block;">
+              <img src={`${base}/images/brennan.png`} alt="Photo 3" style="grid-column: 1 / -1; justify-self: center; width: 50%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -100,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/melgar_quassolo.jpg" alt="Evan adn Penelope picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/melgar_quassolo.jpg`} alt="Evan adn Penelope picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -126,7 +127,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/emily_shining_lights.png" alt="Emily Perry picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/emily_shining_lights.png`} alt="Emily Perry picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -152,7 +153,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/salemi_headshot_1.jpg" alt="Chiara Salemi picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/salemi_headshot_1.jpg`} alt="Chiara Salemi picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -177,7 +178,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/tabitha_suli.jpg" alt="Tabitha Esposito picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/tabitha_suli.jpg`} alt="Tabitha Esposito picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -204,7 +205,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/shreya_website_0.jpg" alt="Shreya Puranam picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/shreya_website_0.jpg`} alt="Shreya Puranam picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -231,7 +232,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/holden_website.png" alt="Holden Kowitt picture" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/holden_website.png`} alt="Holden Kowitt picture" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -258,7 +259,7 @@ import Layout from '../../layouts/Layout.astro';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 200px;">
-              <img src="../public/images/bread.png" alt="BREAD collaboration logo" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/bread.png`} alt="BREAD collaboration logo" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->

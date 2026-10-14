@@ -2,6 +2,7 @@
 import { experimental_AstroContainer } from 'astro/container';
 import Layout from '../../layouts/Layout.astro';
 import { propsToFilename } from 'astro/assets/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -39,7 +40,7 @@ import { propsToFilename } from 'astro/assets/utils';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 300px;">
-              <img src="../public/images/rita_gradstudents.png" alt="Rita Cryostat with Grad Students" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/rita_gradstudents.png`} alt="Rita Cryostat with Grad Students" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -66,7 +67,7 @@ import { propsToFilename } from 'astro/assets/utils';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 300px;">
-              <img src="../public/images/rufus.jpg" alt="Rufus Cryostat" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/rufus.jpg`} alt="Rufus Cryostat" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -97,7 +98,7 @@ import { propsToFilename } from 'astro/assets/utils';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 300px;">
-              <img src="../public/images/remy.jpg" alt="Remy Cryostat" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/remy.jpg`} alt="Remy Cryostat" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -140,7 +141,7 @@ import { propsToFilename } from 'astro/assets/utils';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 300px;">
-              <img src="../public/images/foundry.jpg" alt="Molecular Foundry work" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/foundry.jpg`} alt="Molecular Foundry work" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
@@ -167,7 +168,7 @@ import { propsToFilename } from 'astro/assets/utils';
             
             <!-- Left Column: Image -->
             <div style="flex-shrink: 0; width: 300px;">
-              <img src="../public/images/magnet" alt="Superconducting Magnet Program" style="width: 100%; height: auto; display: block;">
+              <img src={`${base}/images/magnet`} alt="Superconducting Magnet Program" style="width: 100%; height: auto; display: block;">
             </div>
             
             <!-- Right Column: Text Content -->
