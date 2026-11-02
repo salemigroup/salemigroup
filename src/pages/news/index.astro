@@ -30,6 +30,31 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
           <!-- Two-column container -->
           <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+
+            <!-- Left Column: Image -->
+            <div style="flex-shrink: 0; width: 200px;">
+              <img src={`${base}/images/spooky_science_day_2026.jpg`} alt="Group members at the Berkeley Lab table at Chabot Space and Science Center's Spooky Science Day" style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div style="flex-grow: 1;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem;">
+                <div>
+                  <h3 style="margin-bottom:0.25rem;font-size:16px">October 31, 2026</h3>
+                </div>
+              </div>
+              <p style="margin-bottom: 0;font-size:18px">
+                CAL-Pathfinder featured in <a href="https://www.youtube.com/watch?v=GmX6oBOnc3k" style="color: #002676">Berkeley Lab dark matter video</a>, premiered at Chabot Space and Science Center's Spooky Science Day. Group members Emily Perry, Shreya Puranam, and Brennan Coffey went out to share our science with local kids.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="card" style="border-left:4px solid var(--blue); padding: 1rem;">
+          <!-- Two-column container -->
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
             
             <!-- Left Column: Two Images Grid (Total width stays 200px) -->
             <div style="flex-shrink: 0; width: 200px; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
