@@ -2,9 +2,7 @@
 
 Official website for the CAL-Pathfinder dark matter experiment at UC Berkeley.
 
-**Live site:** https://graybert.github.io/salemigroup/
-
-> **⚠️ Repo rename pending:** The GitHub repository must be renamed from `CAL-DMRadio-Website` to `salemigroup` for the live URL above to work. The `astro.config.mjs` has already been updated to use `/salemigroup` as the base path.
+**Live site:** (https://salemigroup.github.io/salemigroup/)
 
 Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
